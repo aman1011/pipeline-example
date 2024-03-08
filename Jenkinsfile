@@ -1,4 +1,4 @@
-node('docker-agent-alpine') {
+node('docker-agent-python') {
     // Define your Git credentials ID (configured in Jenkins)
     def gitCredentialsId = '94b3e0b8-6217-47a1-815e-bff2fc6c2545'
 
