@@ -4,7 +4,7 @@ node('docker-agent-python') {
 
     stage('Checkout') {
         // Checkout code from Git repository using credentials
-        checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[credentialsId: gitCredentialsId , url: 'https://github.com/aman1011/superprof-chris.git']]])
+        checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[credentialsId: gitCredentialsId , url: 'https://github.com/aman1011/pipeline-example.git']]])
     }
 
     stage('Install Dependencies') {
