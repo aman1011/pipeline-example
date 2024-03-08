@@ -9,6 +9,7 @@ node('docker-agent-python') {
 
     stage('Install Dependencies') {
         try {
+            sh 'ls -l'
             sh 'pip install -r requirements.txt --break-system-packages'
         } catch (Exception e) {
             echo "Failed to install dependencies: ${e.message}"
