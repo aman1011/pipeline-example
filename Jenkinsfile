@@ -30,7 +30,7 @@ node('docker-agent-python') {
 
     stage('Linting') {
         try {
-            sh 'pylint app.py test_app.py'
+            sh '/home/jenkins/.local/bin/pylint app.py test_app.py'
         } catch (Exception e) {
             echo "Failed to run linting: ${e.message}"
             currentBuild.result = 'FAILURE'
