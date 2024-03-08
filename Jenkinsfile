@@ -30,7 +30,7 @@ node('docker-agent-python') {
 
     stage('Linting') {
         try {
-            sh 'pylint3 app.py test_app.py'
+            sh 'pylint app.py test_app.py'
         } catch (Exception e) {
             echo "Failed to run linting: ${e.message}"
             currentBuild.result = 'FAILURE'
